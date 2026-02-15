@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Crime Investigation System</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <h2>🛡 Smart Crime</h2>
+            <p>Investigation System</p>
+        </div>
+
+        <ul>
+            <li>Create New Case</li>
+            <li>Criminal Database</li>
+            <li>Settings</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+
+        <!-- Top Navbar -->
+        <div class="topbar">
+            <div class="nav-left">
+                <span>Evidence</span>
+                <span>Analytics</span>
+                <span>Timeline</span>
+                <span>Reports</span>
+            </div>
+
+            <div class="nav-right">
+                <i class="fas fa-bell"></i>
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+
+        <!-- Dashboard Body -->
+        <div class="dashboard">
+
+            <!-- Active Case Summary -->
+<div class="card">
+    <h3>Active Case Summary</h3>
+
+    <!-- Column Headings -->
+    <div class="case-header">
+        <div>Case ID</div>
+        <div>Crime Type</div>
+        <div>Status</div>
+        <div>Assigned Officer</div>
+    </div>
+
+    <div class="case-list">
+
+        <div class="case-item clickable" onclick="window.location.href='case1.html'">
+            <div>2024-045678</div>
+            <div>Homicide</div>
+            <div class="status progress">In Progress</div>
+            <div>Detective Kumar</div>
+        </div>
+        
+        
+
+        <div class="case-item">
+            <div>2024-032345</div>
+            <div>Bank Robbery</div>
+            <div class="status review">Under Review</div>
+            <div>Detective Sharma</div>
+        </div>
+
+        <div class="case-item clickable" onclick="window.location.href='case3.html'">
+            <div>2024-067891</div>
+            <div>Cyber Fraud</div>
+            <div class="status flagged">Flagged</div>
+            <div>Inspector Rao</div>
+        </div>
+        
+        
+
+        <div class="case-item">
+            <div>2024-078912</div>
+            <div>Kidnapping</div>
+            <div class="status progress">In Progress</div>
+            <div>Officer Mehta</div>
+        </div>
+
+        <div class="case-item">
+            <div>2024-089123</div>
+            <div>Drug Trafficking</div>
+            <div class="status closed">Closed</div>
+            <div>Detective Singh</div>
+        </div>
+
+    </div>
+</div>
+
+
+
+            <!-- Case Statistics -->
+<div class="card">
+    <h3>Case Statistics</h3>
+
+    <div class="stats-container">
+        
+        <!-- Left Side - Cards -->
+        <div class="stats">
+            <div class="stat-box">
+                <h4>Closed</h4>
+                <p>12</p>
+            </div>
+            <div class="stat-box">
+                <h4>Verified</h4>
+                <p>34</p>
+            </div>
+            <div class="stat-box">
+                <h4>Flagged</h4>
+                <p>5</p>
+            </div>
+        </div>
+
+        <!-- Right Side - Chart -->
+        <div class="chart-box">
+            <canvas id="caseChart"></canvas>
+        </div>
+
+    </div>
+</div>
+
+            
+            <!-- Evidence Collection -->
+<div class="card">
+    <h3>Evidence Collection</h3>
+    <div class="evidence">
+
+        <div class="evidence-box">
+            <i class="fa-solid fa-image evidence-icon"></i>
+            <h4>Images</h4>
+            <p>24</p>
+        </div>
+
+        <div class="evidence-box">
+            <i class="fa-solid fa-video evidence-icon"></i>
+            <h4>Videos</h4>
+            <p>8</p>
+        </div>
+
+        <div class="evidence-box">
+            <i class="fa-solid fa-file-lines evidence-icon"></i>
+            <h4>Documents</h4>
+            <p>15</p>
+        </div>
+
+    </div>
+</div>
+
+
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
