@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case 2026-078912</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <h2>🛡 Smart Crime</h2>
+            <p>Investigation System</p>
+        </div>
+        <ul>
+            <li>Create New Case</li>
+            <li>Criminal Database</li>
+            <li>Settings</li>
+        </ul>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+
+        <!-- Topbar -->
+        <div class="topbar">
+            <div class="nav-left">
+                <span>Evidence</span>
+                <span>Analytics</span>
+                <span>Timeline</span>
+                <span>Reports</span>
+            </div>
+            <div class="nav-right">
+                🔔 👤
+            </div>
+        </div>
+<div id="caseReport">
+        <!-- Case Header -->
+        <div class="case-header">
+            <h2>Case ID: 2026-078912</h2>
+            <p>Crime Type: Kidnapping | Status: In Progress | Assigned Officer: Officer Mehta</p>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab(event, 'overview')">Overview</button>
+            <button class="tab-btn" onclick="openTab(event, 'evidence')">Evidence</button>
+            <button class="tab-btn" onclick="openTab(event, 'timeline')">Timeline</button>
+            <button class="tab-btn" onclick="openTab(event, 'suspect')">Suspect Analysis</button>
+            <button class="tab-btn" onclick="openTab(event, 'ai')">AI Insights</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+
+            <!-- Overview -->
+            <div id="overview" class="tab-section active">
+                <h3>Case Overview</h3>
+
+                <p><strong>Date of Incident:</strong> 18 February 2026</p>
+                <p><strong>Victim:</strong> Aarav Khanna (Age 14)</p>
+                <p><strong>Location:</strong> Greenwood Residential Colony</p>
+
+                <br>
+
+                <p>
+                    The victim was reported missing at approximately 6:30 PM
+                    while returning home from tuition classes.
+                </p>
+
+                <p>
+                    Witnesses reported seeing a white van parked near the colony gate.
+                </p>
+
+                <p>
+                    A ransom call was received at 9:15 PM demanding ₹50 lakhs.
+                </p>
+
+                <p>
+                    Mobile tower data and CCTV footage are currently under analysis.
+                </p>
+            </div>
+
+            <!-- Evidence -->
+            <div id="evidence" class="tab-section">
+
+                <h3>Evidence Management</h3>
+
+                <div class="upload-section">
+                    <input type="file" id="fileInput">
+                    <textarea placeholder="Add investigation notes..." rows="3"></textarea>
+                    <button class="upload-btn" onclick="revealEvidence('kidnap')">
+                        Upload
+                    </button>
+                </div>
+
+                <hr>
+
+                <div id="evidenceResult" class="evidence-container hidden">
+
+                    <div class="evidence-preview">
+                        <h4>Uploaded Evidence</h4>
+
+                        <img id="previewImage"
+                             src=""
+                             class="evidence-media"
+                             style="display:none;">
+
+                        <p id="fileName"></p>
+                    </div>
+
+                    <div class="evidence-analysis">
+                        <h4>AI Authenticity Report</h4>
+
+                        <p><strong>Voice Stress Analysis:</strong> High Anxiety Detected</p>
+                        <p><strong>Background Noise Match:</strong> Highway Proximity</p>
+                        <p><strong>Location Probability:</strong> 68% Industrial Zone</p>
+
+                        <div class="risk-bar high">
+                            <div class="risk-fill" style="width:68%"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div id="timeline" class="tab-section">
+
+                <h3>Kidnapping Timeline</h3>
+
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">5:45 PM</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            Victim leaves tuition center
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">6:10 PM</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            White van spotted near colony gate
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">6:30 PM</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            Victim reported missing by parents
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">9:15 PM</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            Ransom call received
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Internal Inquiry -->
+            <div id="suspect" class="tab-section">
+                <h3>Internal Review & Leads</h3>
+                <p>⚠ Previous dispute between victim's father and business partner.</p>
+                <p>⚠ School van driver absent on day of incident.</p>
+                <p>⚠ CCTV blind spot identified near colony rear gate.</p>
+            </div>
+
+            <!-- AI Insights -->
+            <div id="ai" class="tab-section">
+                <h3>AI Generated Possibilities</h3>
+
+                <div class="ai-container">
+
+                    <div class="ai-card">
+                        <h4>Possibility 1: Financially Motivated Kidnapping</h4>
+                        <ul>
+                            <li>Clear ransom demand</li>
+                            <li>Calculated timing after tuition</li>
+                            <li>High probability of organized planning</li>
+                            <li>Targeted based on family income profile</li>
+                        </ul>
+                    </div>
+
+                    <div class="ai-card">
+                        <h4>Possibility 2: Personal Revenge Angle</h4>
+                        <ul>
+                            <li>Father’s recent business conflicts</li>
+                            <li>Knowledge of victim routine</li>
+                            <li>No immediate harm reported</li>
+                            <li>Possible coercion strategy</li>
+                        </ul>
+                    </div>
+
+                    <div class="ai-card">
+                        <h4>Possibility 3: Opportunistic Abduction</h4>
+                        <ul>
+                            <li>Minimal planning indicators</li>
+                            <li>Vehicle not traced yet</li>
+                            <li>Random victim selection possible</li>
+                            <li>Lower probability based on ransom precision</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <button onclick="downloadPDF()" class="download-btn">
+       Download PDF Report
+   </button>
+</div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="case.js"></script>
+
+</body>
+</html>

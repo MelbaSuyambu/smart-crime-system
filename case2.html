@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case 2026-032345</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <h2>🛡 Smart Crime</h2>
+            <p>Investigation System</p>
+        </div>
+        <ul>
+            <li>Create New Case</li>
+            <li>Criminal Database</li>
+            <li>Settings</li>
+        </ul>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+
+        <!-- Topbar -->
+        <div class="topbar">
+            <div class="nav-left">
+                <span>Evidence</span>
+                <span>Analytics</span>
+                <span>Timeline</span>
+                <span>Reports</span>
+            </div>
+            <div class="nav-right">
+                🔔 👤
+            </div>
+        </div>
+<div id="caseReport">
+        <!-- Case Header -->
+        <div class="case-header">
+            <h2>Case ID: 2026-032345</h2>
+            <p>Crime Type: Bank Robbery | Status: Under Review | Assigned Officer: Detective Sharma</p>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab(event, 'overview')">Overview</button>
+            <button class="tab-btn" onclick="openTab(event, 'evidence')">Evidence</button>
+            <button class="tab-btn" onclick="openTab(event, 'timeline')">Timeline</button>
+            <button class="tab-btn" onclick="openTab(event, 'suspect')">Suspect Analysis</button>
+            <button class="tab-btn" onclick="openTab(event, 'ai')">AI Insights</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+
+            <!-- Overview -->
+            <div id="overview" class="tab-section active">
+                <h3>Case Overview</h3>
+
+                <p><strong>Date of Incident:</strong> 12 January 2026</p>
+                <p><strong>Location:</strong> Central City Bank, MG Road</p>
+                <p><strong>Estimated Loss:</strong> ₹2.4 Crores</p>
+
+                <br>
+
+                <p>
+                    Three masked individuals entered the bank premises at 10:05 AM
+                    and threatened staff using firearms.
+                </p>
+
+                <p>
+                    CCTV footage shows suspects escaping in a black SUV
+                    without a visible number plate.
+                </p>
+
+                <p>
+                    No civilian injuries reported. One security guard sustained minor injuries.
+                </p>
+
+                <p>
+                    Investigation is currently focused on vehicle tracking
+                    and prior surveillance activity.
+                </p>
+            </div>
+
+            <!-- Evidence -->
+            <div id="evidence" class="tab-section">
+
+                <h3>Evidence Management</h3>
+
+                <div class="upload-section">
+                    <input type="file" id="fileInput">
+                    <textarea placeholder="Add investigation notes..." rows="3"></textarea>
+                    <button class="upload-btn" onclick="revealEvidence('robbery')">
+                        Upload
+                    </button>
+                </div>
+
+                <hr>
+
+                <div id="evidenceResult" class="evidence-container hidden">
+
+                    <div class="evidence-preview">
+                        <h4>Uploaded Evidence</h4>
+
+                        <img id="previewImage"
+                             src=""
+                             class="evidence-media"
+                             style="display:none;">
+
+                        <p id="fileName"></p>
+                    </div>
+
+                    <div class="evidence-analysis">
+                        <h4>AI Authenticity Report</h4>
+
+                        <p><strong>Weapon Detection Confidence:</strong> 91%</p>
+                        <p><strong>Facial Recognition Match:</strong> 37%</p>
+                        <p><strong>Vehicle Plate Visibility:</strong> Obscured</p>
+
+                        <div class="risk-bar high">
+                            <div class="risk-fill" style="width:91%"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div id="timeline" class="tab-section">
+
+                <h3>Robbery Timeline</h3>
+
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">09:55 AM</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            Black SUV seen circling bank area
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">10:05 AM</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            Suspects enter bank premises
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">10:11 AM</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            Cash vault accessed under threat
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">10:18 AM</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            Suspects flee in black SUV
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Internal Inquiry -->
+            <div id="suspect" class="tab-section">
+                <h3>Internal Review</h3>
+                <p>⚠ Security camera blind spot identified near rear exit.</p>
+                <p>⚠ Guard shift replacement occurred 20 minutes before incident.</p>
+                <p>⚠ Vault access code had not been updated for 18 months.</p>
+            </div>
+
+            <!-- AI Insights -->
+            <div id="ai" class="tab-section">
+                <h3>AI Generated Possibilities</h3>
+
+                <div class="ai-container">
+
+                    <div class="ai-card">
+                        <h4>Possibility 1: Organized External Gang</h4>
+                        <ul>
+                            <li>Coordinated timing and escape</li>
+                            <li>Professional weapon handling</li>
+                            <li>Pre-surveillance likely conducted</li>
+                            <li>Minimal operational delay</li>
+                        </ul>
+                    </div>
+
+                    <div class="ai-card">
+                        <h4>Possibility 2: Insider Information Leak</h4>
+                        <ul>
+                            <li>Vault accessed quickly</li>
+                            <li>Knowledge of CCTV blind spot</li>
+                            <li>Guard rotation timing exploited</li>
+                            <li>Possible internal accomplice</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <button onclick="downloadPDF()" class="download-btn">
+       Download PDF Report
+   </button>
+</div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="case.js"></script>
+
+</body>
+</html>

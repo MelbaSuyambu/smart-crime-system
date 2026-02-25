@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case Workspace</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar (same as dashboard) -->
+    <div class="sidebar">
+        <div class="logo">
+            <h2>🛡 Smart Crime</h2>
+            <p>Investigation System</p>
+        </div>
+        <ul>
+            <li>Create New Case</li>
+            <li>Criminal Database</li>
+            <li>Settings</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+
+        <!-- Topbar -->
+        <div class="topbar">
+            <div class="nav-left">
+                <span>Evidence</span>
+                <span>Analytics</span>
+                <span>Timeline</span>
+                <span>Reports</span>
+            </div>
+            <div class="nav-right">
+                🔔 👤
+            </div>
+        </div>
+
+        <!-- Case Header -->
+        <div class="case-header">
+            <h2>Case ID: 2024-045678</h2>
+            <p>Crime Type: Homicide | Status: In Progress | Assigned Officer: Detective Kumar</p>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab('overview')">Overview</button>
+            <button class="tab-btn" onclick="openTab('evidence')">Evidence</button>
+            <button class="tab-btn" onclick="openTab('timeline')">Timeline</button>
+            <button class="tab-btn" onclick="openTab('suspect')">Suspect Analysis</button>
+            <button class="tab-btn" onclick="openTab('ai')">AI Insights</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+
+            <div id="overview" class="tab-section active">
+                <h3>Case Overview</h3>
+                <p>Summary of the case will appear here.</p>
+            </div>
+
+            <div id="evidence" class="tab-section">
+                <h3>Upload Evidence</h3>
+                <button>Upload File</button>
+                <br><br>
+                <textarea placeholder="Add investigation notes..." rows="5"></textarea>
+            </div>
+
+            <div id="timeline" class="tab-section">
+                <h3>Timeline Reconstruction</h3>
+                <p>7:00 AM – Ram left home</p>
+                <p>5:00 PM – Reached coaching class</p>
+            </div>
+
+            <div id="suspect" class="tab-section">
+                <h3>Suspect Contradiction Analysis</h3>
+                <p>⚠ Ram said he was at school, but CCTV shows absence.</p>
+            </div>
+
+            <div id="ai" class="tab-section">
+                <h3>AI Generated Possibilities</h3>
+                <p>Possibility 1: Crime was pre-planned.</p>
+                <p>Possibility 2: Crime occurred during argument escalation.</p>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<script src="case.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case 2026-067891</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <h2>🛡 Smart Crime</h2>
+            <p>Investigation System</p>
+        </div>
+        <ul>
+            <li>Create New Case</li>
+            <li>Criminal Database</li>
+            <li>Settings</li>
+        </ul>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+
+        <!-- Topbar -->
+        <div class="topbar">
+            <div class="nav-left">
+                <span>Evidence</span>
+                <span>Analytics</span>
+                <span>Timeline</span>
+                <span>Reports</span>
+            </div>
+            <div class="nav-right">
+                🔔 👤
+            </div>
+        </div>
+<div id="caseReport">
+        <!-- Case Header -->
+        <div class="case-header">
+            <h2>Case ID: 2026-067891</h2>
+            <p>Crime Type: Cyber Fraud | Status: Flagged | Assigned Officer: Inspector Rao</p>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab(event, 'overview')">Overview</button>
+            <button class="tab-btn" onclick="openTab(event, 'evidence')">Evidence</button>
+            <button class="tab-btn" onclick="openTab(event, 'timeline')">Timeline</button>
+            <button class="tab-btn" onclick="openTab(event, 'suspect')">Suspect Analysis</button>
+            <button class="tab-btn" onclick="openTab(event, 'ai')">AI Insights</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+
+            <!-- Overview -->
+            <div id="overview" class="tab-section active">
+                <h3>Case Overview</h3>
+
+                <p><strong>Date of Incident:</strong> 04 April 2026</p>
+                <p><strong>Victim:</strong> Meera Enterprises Pvt Ltd</p>
+                <p><strong>Loss Amount:</strong> ₹48,00,000</p>
+
+                <br>
+
+                <p>
+                    The company reported an unauthorized fund transfer initiated through
+                    a phishing email impersonating the Managing Director.
+                </p>
+
+                <p>
+                    The finance department processed the payment under urgency
+                    without secondary verification.
+                </p>
+
+                <p>
+                    Email header analysis shows routing through a foreign server,
+                    but final IP logs indicate possible VPN masking from a local source.
+                </p>
+
+                <p>
+                    Two internal employees had access to the finance credentials
+                    during the transaction window.
+                </p>
+            </div>
+
+            <div id="evidence" class="tab-section">
+
+                <h3>Evidence Management</h3>
+            
+                <!-- Upload Section -->
+                <div class="upload-section">
+                    <input type="file" id="fileInput">
+                    <textarea placeholder="Add investigation notes..." rows="3"></textarea>
+                    <button class="upload-btn" onclick="revealEvidence('cyber')">
+                        Upload
+</button>
+                </div>
+            
+                <hr>
+            
+                <!-- Hidden Evidence Area -->
+                <div id="evidenceResult" class="evidence-container hidden">
+            
+                    <!-- LEFT -->
+                    <div class="evidence-preview">
+                        <h4>Uploaded Evidence</h4>
+            
+                        <img id="previewImage"
+                             src=""
+                             class="evidence-media"
+                             style="display:none;">
+            
+                        <p id="fileName"></p>
+                    </div>
+            
+                    <!-- RIGHT -->
+                    <div class="evidence-analysis">
+                        <h4>AI Authenticity Report</h4>
+            
+                        <p><strong>Manipulation Risk:</strong> 12%</p>
+                        <p><strong>Deepfake Probability:</strong> 3%</p>
+                        <p><strong>Metadata Integrity:</strong> Verified</p>
+            
+                        <div class="risk-bar">
+                            <div class="risk-fill" style="width:12%"></div>
+                        </div>
+            
+                    </div>
+            
+                </div>
+            
+            </div>
+            
+
+            
+
+            <div id="timeline" class="tab-section">
+
+                <h3>Transaction Timeline</h3>
+            
+                <div class="timeline">
+            
+                    <div class="timeline-item">
+                        <div class="timeline-time">10:12 AM</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            Phishing email received
+                        </div>
+                    </div>
+            
+                    <div class="timeline-item">
+                        <div class="timeline-time">10:25 AM</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            Payment authorization initiated
+                        </div>
+                    </div>
+            
+                    <div class="timeline-item">
+                        <div class="timeline-time">10:41 AM</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            ₹48,00,000 transferred
+                        </div>
+                    </div>
+            
+                    <div class="timeline-item">
+                        <div class="timeline-time">12:05 PM</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            Fraud discovered
+                        </div>
+                    </div>
+            
+                </div>
+            
+            </div>
+            
+
+            <!-- Internal Inquiry -->
+            <div id="suspect" class="tab-section">
+                <h3>Internal Employee Analysis</h3>
+                <p>⚠ Employee A accessed credentials 15 minutes before transfer.</p>
+                <p>⚠ Employee B logged into system from unusual IP address.</p>
+                <p>⚠ VPN traces indicate potential insider collaboration.</p>
+            </div>
+
+            <!-- AI Insights -->
+<div id="ai" class="tab-section">
+    <h3>AI Generated Possibilities</h3>
+
+    <div class="ai-container">
+
+        <div class="ai-card">
+            <h4>Possibility 1: External Phishing Attack</h4>
+            <ul>
+                <li>Email routed through foreign server</li>
+                <li>Classic CEO impersonation pattern</li>
+                <li>No confirmed internal financial gain</li>
+                <li>Attack executed within short time window</li>
+            </ul>
+        </div>
+
+        <div class="ai-card">
+            <h4>Possibility 2: Insider Credential Leak</h4>
+            <ul>
+                <li>Employee A accessed credentials before transfer</li>
+                <li>Unusual IP login activity</li>
+                <li>VPN masking detected locally</li>
+                <li>Credential misuse window matches transfer time</li>
+            </ul>
+        </div>
+
+        <div class="ai-card">
+            <h4>Possibility 3: Coordinated Fraud Operation</h4>
+            <ul>
+                <li>External phishing + internal cooperation</li>
+                <li>Precise transaction timing</li>
+                <li>Advanced routing concealment</li>
+                <li>Multi-layer fraud indicators detected</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+</div>
+<button onclick="downloadPDF()" class="download-btn">
+       Download PDF Report
+   </button>
+        </div>
+
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="case.js"></script>
+
+</body>
+</html>

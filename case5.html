@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case 2026-089123</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <h2>🛡 Smart Crime</h2>
+            <p>Investigation System</p>
+        </div>
+        <ul>
+            <li>Create New Case</li>
+            <li>Criminal Database</li>
+            <li>Settings</li>
+        </ul>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+
+        <!-- Topbar -->
+        <div class="topbar">
+            <div class="nav-left">
+                <span>Evidence</span>
+                <span>Analytics</span>
+                <span>Timeline</span>
+                <span>Reports</span>
+            </div>
+            <div class="nav-right">
+                🔔 👤
+            </div>
+        </div>
+<div id="caseReport">
+        <!-- Case Header -->
+        <div class="case-header">
+            <h2>Case ID: 2026-089123</h2>
+            <p>Crime Type: Drug Trafficking | Status: Closed | Assigned Officer: Detective Singh</p>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab(event, 'overview')">Overview</button>
+            <button class="tab-btn" onclick="openTab(event, 'evidence')">Evidence</button>
+            <button class="tab-btn" onclick="openTab(event, 'timeline')">Timeline</button>
+            <button class="tab-btn" onclick="openTab(event, 'suspect')">Suspect Analysis</button>
+            <button class="tab-btn" onclick="openTab(event, 'ai')">AI Insights</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+
+            <!-- Overview -->
+            <div id="overview" class="tab-section active">
+                <h3>Case Overview</h3>
+
+                <p><strong>Date of Arrest:</strong> 02 March 2026</p>
+                <p><strong>Location:</strong> Warehouse District, Sector 14</p>
+                <p><strong>Seized Contraband:</strong> 18 kg Narcotics</p>
+
+                <br>
+
+                <p>
+                    Acting on intelligence input, officers conducted a raid
+                    at a suspected storage warehouse used for illegal narcotics distribution.
+                </p>
+
+                <p>
+                    Three suspects were apprehended at the scene.
+                </p>
+
+                <p>
+                    Digital evidence confirmed interstate supply chain links.
+                </p>
+
+                <p>
+                    Case concluded with successful prosecution and conviction.
+                </p>
+            </div>
+
+            <!-- Evidence -->
+            <div id="evidence" class="tab-section">
+
+                <h3>Evidence Management</h3>
+
+                <div class="upload-section">
+                    <input type="file" id="fileInput">
+                    <textarea placeholder="Add investigation notes..." rows="3"></textarea>
+                    <button class="upload-btn" onclick="revealEvidence('drugs')">
+                        Upload
+                    </button>
+                </div>
+
+                <hr>
+
+                <div id="evidenceResult" class="evidence-container hidden">
+
+                    <div class="evidence-preview">
+                        <h4>Uploaded Evidence</h4>
+
+                        <img id="previewImage"
+                             src=""
+                             class="evidence-media"
+                             style="display:none;">
+
+                        <p id="fileName"></p>
+                    </div>
+
+                    <div class="evidence-analysis">
+                        <h4>AI Authenticity Report</h4>
+
+                        <p><strong>Substance Identification:</strong> Confirmed (Heroin)</p>
+                        <p><strong>Packaging Consistency:</strong> 95% Match</p>
+                        <p><strong>Chain of Custody:</strong> Verified</p>
+
+                        <div class="risk-bar">
+                            <div class="risk-fill" style="width:95%"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div id="timeline" class="tab-section">
+
+                <h3>Operation Timeline</h3>
+
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">09:00 AM</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            Intelligence tip received
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">11:30 AM</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            Surveillance team deployed
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">02:15 PM</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            Warehouse raid executed
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">03:10 PM</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            Suspects arrested & narcotics seized
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Internal Inquiry -->
+            <div id="suspect" class="tab-section">
+                <h3>Network & Internal Analysis</h3>
+                <p>✔ Interstate supplier identified and apprehended.</p>
+                <p>✔ Financial transactions traced to shell accounts.</p>
+                <p>✔ Communication logs confirmed organized distribution ring.</p>
+            </div>
+
+            <!-- AI Insights -->
+            <div id="ai" class="tab-section">
+                <h3>AI Generated Possibilities (Final Assessment)</h3>
+
+                <div class="ai-container">
+
+                    <div class="ai-card">
+                        <h4>Primary Conclusion: Organized Drug Network</h4>
+                        <ul>
+                            <li>Structured supply chain detected</li>
+                            <li>Bulk storage at secure location</li>
+                            <li>Financial laundering evidence</li>
+                            <li>Coordinated communication patterns</li>
+                        </ul>
+                    </div>
+
+                    <div class="ai-card">
+                        <h4>Distribution Model Identified</h4>
+                        <ul>
+                            <li>Regional sub-distributors involved</li>
+                            <li>Weekly shipment cycle</li>
+                            <li>Encrypted messaging apps used</li>
+                            <li>Warehouse used as primary hub</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <button onclick="downloadPDF()" class="download-btn">
+       Download PDF Report
+   </button>
+</div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="case.js"></script>
+
+</body>
+</html>
